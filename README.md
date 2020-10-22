@@ -9,3 +9,12 @@
 4.http://image.kyobobook.co.kr/ink/html/guide/index.html<br>
 
 https://www2020.thewebconf.org/schedule
+
+
+# vue + express 
+https://yorr.tistory.com/6
+https://m.blog.naver.com/PostView.nhn?blogId=kangminser88&logNo=221152151491&proxyReferer=https:%2F%2Fwww.google.com%2F
+https://velog.io/@woounnan/VUEJS-Vue.js-Express-MongoDB-%EA%B5%AC%EC%B6%95
+https://daddynkidsmakers.blogspot.com/2020/01/vue-mongodb-express.html
+https://velopert.com/594
+https://medium.com/hivelab-dev/vue-express-mysql-part1-98f68408d444
