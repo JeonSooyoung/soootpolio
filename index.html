@@ -430,85 +430,655 @@
 	//'table tr:gt(0) 0보다 큰것만 마우스 오버 효과가 나타남
 //]]>
 	</script>
+	<!--[if lt IE 9]>
+		<script src="https://t1.daumcdn.net/tistory_admin/lib/jquery/jquery-1.12.4.min.js">
+		</script>
+		<script src="js/html5shiv.min.js"></script>
+		<script type="text/javascript">
+		alert("현재 당신이 보는 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트해주세요!");
+		</script>
+	<![endif]-->
 </head>
-
-<body>
-	<div id="wrap">
-		<div class="tit">
-			<h1><img src="resource/images/top_logo_black@2x.png" width="60" alt="">Sooo's index</h1>
-			<!-- info -->
-			<!-- 
-				A-Project - ADT
-				• 작업일자 : 2020-04-17 ~ • 퍼블 : 서남호M/전수영M/심해란M • 기획 : 박지형M/이수영M • 디자인 : 오유미M/안정희M • 개발 : ICT개발1팀 최현섭M / 이재형M / 이유림M • 사업 : SKT 김재문M
-				Front/mobile/Guide/
-				진행률/클래스 검색/미리보기
-			-->
-			<p>
-				<span class="today mainColor bold"></span>
-				<span id="rate"></span><br />
-			</p>
+	<!-- 
+		A-Project - ADT
+		• 작업일자 : 2020-04-17 ~ • 퍼블 : 서남호M/전수영M/심해란M • 기획 : 박지형M/이수영M • 디자인 : 오유미M/안정희M • 개발 : ICT개발1팀 최현섭M / 이재형M / 이유림M • 사업 : SKT 김재문M
+		Front/mobile/Guide/
+		진행률/클래스 검색/미리보기
+	-->
+	<body>
+		<div id="acc-nav">
+			<a href="#content">본문 바로가기</a>
 		</div>
-		<!--No.	depth1	depth2	depth3	depth4	진행상태	링크	완료일자	수정 및 참고 -->
-		<table class="list">
-			<thead>
-				<tr>
-					<th>No.</th>
-					<th>Depth 1</th>
-					<th>Depth 2</th>
-					<th>Depth 3</th>
-					<th>Depth 4</th>
-					<th>Depth 5</th>
-					<th>File Name</th>
-					<th>종료일</th>
-					<th>상태</th>
-					<th>수정내역</th>
-					<th>비고</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td></td><!-- No. -->
-					<td>레이아웃</td><!-- Depth 1 -->
-					<td></td><!-- Depth 2 -->
-					<td></td><!-- Depth 3 -->
-					<td></td><!-- Depth 4 -->
-					<td></td><!-- Depth 5 -->
-					<td><a target="_blank" href="html/layout.html">layout.html</a></td><!-- File Name -->
-					<td class="date"></td><!-- 종료일 -->
-					<td></td><!-- 상태 -->
-					<td></td><!-- 수정내역 -->
-					<td></td><!-- 비고 -->
-				</tr>
-				<tr>
-					<td></td><!-- No. -->
-					<td>메인</td><!-- Depth 1 -->
-					<td></td><!-- Depth 2 -->
-					<td></td><!-- Depth 3 -->
-					<td></td><!-- Depth 4 -->
-					<td></td><!-- Depth 5 -->
-					<td><a target="_blank" href="html/main.html">main.html</a></td><!-- File Name -->
-					<td class="date"></td><!-- 종료일 -->
-					<td></td><!-- 상태 -->
-					<td></td><!-- 수정내역 -->
-					<td></td><!-- 비고 -->
-				</tr>
-				<tr>
-					<td></td><!-- No. -->
-					<td>요약기록</td><!-- Depth 1 -->
-					<td></td><!-- Depth 2 -->
-					<td></td><!-- Depth 3 -->
-					<td></td><!-- Depth 4 -->
-					<td></td><!-- Depth 5 -->
-					<td><a target="_blank" href="html/summary.html">summary.html</a></td><!-- File Name -->
-					<td class="date"></td><!-- 종료일 -->
-					<td></td><!-- 상태 -->
-					<td></td><!-- 수정내역 -->
-					<td></td><!-- 비고 -->
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-</body>
+		
+		<div id="wrap">
+			<header id="webs_header">
+				<div class="header_top clearfix">
+					<div class="tit">
+						<h1><img src="resource/images/top_logo_black@2x.png" width="60" alt="">Sooo's index</h1>
+						<!-- info -->
+			
+						<p>
+							<span class="today mainColor bold"></span>
+							<span id="rate"></span><br />
+						</p>
+					</div>
+					<!--No.	depth1	depth2	depth3	depth4	진행상태	링크	완료일자	수정 및 참고 -->
+			
+					<div class="nav">
+					<ul>
+						<li><a href="https://wiss.tistory.com/">Design</a></li>
+						<li><a href="https://webzz.tistory.com/">Coding</a></li>
+						<li><a href="https://wtss.tistory.com/">Tutor</a></li>
+						<li><a href="http://webstoryboy.dothome.co.kr/">Edu</a></li>
+						<li><a href="https://wsss.tistory.com/">CSS</a></li>
+					</ul>
+					</div>
+					<div class="mNav">
+					<div class='toggle'>
+						<span></span>
+					</div>
+					</div>
+				</div>
+			</header>
+			<!-- //header -->
+		
+			<div class="search">
+				<div class="wContainer">
+					<div class="row">
+			
+					<input type="text" name="search" value="" placeholder="클래스 검색"
+						onkeypress="if (event.keyCode == 13) { try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){} }">
+					<button class="search_btn" type="submit"
+						onclick="try{window.location.href='/search/'+looseURIEncode(document.getElementsByName('search')[0].value);document.getElementsByName('search')[0].value='';return false;}catch(e){}">검색</button>
+			
+					</div>
+				</div>
+			</div>
+			<div class="keyword">
+				<div class="wContainer">
+					<div class="row">
+					<a href="https://wsss.tistory.com/search/css">#css</a>
+					<a href="https://wsss.tistory.com/search/animation">#animation</a>
+					<a href="https://wsss.tistory.com/search/canvas">#canvas</a>
+					<a href="https://wsss.tistory.com/search/svg">#svg</a>
+					<a href="https://wsss.tistory.com/search/button">#button</a>
+					<a href="https://wsss.tistory.com/search/scroll">#scroll</a>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<section class="container">
+				<article id="content">
+					<div class="inner">
+					<div class="black"></div>
+					<div class="aside">
+						<ul class="tt_category">
+						<li class="">
+							<a class="link_tit" href="/category">
+							CSS Reference <span class="c_cnt">(1468)</span>
+			
+							</a>
+			
+							<ul class="category_list">
+							<li class="">
+								<a class="link_item" href="/category/Collect">
+								Collect <span class="c_cnt">(2)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Collect/Button">
+									Button
+									<span class="c_cnt">(1)</span>
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Collect/Text">
+									Text
+									<span class="c_cnt">(1)</span>
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Image">
+								Image <span class="c_cnt">(118)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Image/Hover%20Effect">
+									Hover Effect
+									<span class="c_cnt">(39)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Image/Image%20Effect">
+									Image Effect
+									<span class="c_cnt">(39)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Image/Background">
+									Background
+									<span class="c_cnt">(40)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Slider">
+								Slider <span class="c_cnt">(70)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Slider/Image%20Slider">
+									Image Slider
+									<span class="c_cnt">(70)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Mouse">
+								Mouse <span class="c_cnt">(53)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Mouse/Mouse%20Effect">
+									Mouse Effect
+									<span class="c_cnt">(53)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Animation">
+								Animation <span class="c_cnt">(281)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/CSS3">
+									CSS3
+									<span class="c_cnt">(44)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/Loading">
+									Loading
+									<span class="c_cnt">(66)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/Animation">
+									Animation
+									<span class="c_cnt">(141)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/SVG">
+									SVG
+									<span class="c_cnt">(14)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/GSAP">
+									GSAP
+									<span class="c_cnt">(13)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Animation/INTRO">
+									INTRO
+									<span class="c_cnt">(3)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Particles">
+								Particles <span class="c_cnt">(141)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Particles/Particles">
+									Particles
+									<span class="c_cnt">(65)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Particles/WebGL">
+									WebGL
+									<span class="c_cnt">(21)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Particles/Canvas">
+									Canvas
+									<span class="c_cnt">(46)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Particles/Three.js">
+									Three.js
+									<span class="c_cnt">(9)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Parallax">
+								Parallax <span class="c_cnt">(56)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Parallax/Scroll">
+									Scroll
+									<span class="c_cnt">(56)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Button">
+								Button <span class="c_cnt">(237)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Button/Button%20Input">
+									Button Input
+									<span class="c_cnt">(32)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Button/Button%20Search%20">
+									Button Search
+									<span class="c_cnt">(12)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Button/Button%20SNS">
+									Button SNS
+									<span class="c_cnt">(18)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Button/Button">
+									Button
+									<span class="c_cnt">(175)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Menu">
+								Menu <span class="c_cnt">(128)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Accordian%20Menu">
+									Accordian Menu
+									<span class="c_cnt">(9)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Tab%20Menu">
+									Tab Menu
+									<span class="c_cnt">(5)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Hamberger%20Menu">
+									Hamberger Menu
+									<span class="c_cnt">(13)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Side%20Menu">
+									Side Menu
+									<span class="c_cnt">(14)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Mobile%20Menu">
+									Mobile Menu
+									<span class="c_cnt">(9)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Overlay%20Menu">
+									Overlay Menu
+									<span class="c_cnt">(17)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Menu/Menu">
+									Menu
+									<span class="c_cnt">(61)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Text">
+								Text <span class="c_cnt">(225)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Text/Text">
+									Text
+									<span class="c_cnt">(218)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Text/Font">
+									Font
+									<span class="c_cnt">(7)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Modal">
+								Modal <span class="c_cnt">(14)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Modal/Modal">
+									Modal
+									<span class="c_cnt">(14)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/Media">
+								Media <span class="c_cnt">(22)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/Media/Audio">
+									Audio
+									<span class="c_cnt">(13)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Media/Video">
+									Video
+									<span class="c_cnt">(2)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/Media/Clock">
+									Clock
+									<span class="c_cnt">(7)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							<li class="">
+								<a class="link_item" href="/category/ETC">
+								ETC <span class="c_cnt">(83)</span>
+			
+								</a>
+			
+								<ul class="sub_category_list">
+								<li class="">
+									<a class="link_sub_item" href="/category/ETC/Mobile%20UI">
+									Mobile UI
+									<span class="c_cnt">(13)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/ETC/Etc">
+									Etc
+									<span class="c_cnt">(25)</span>
+			
+									</a>
+								</li>
+								<li class="">
+									<a class="link_sub_item" href="/category/ETC/Grid">
+									Grid
+									<span class="c_cnt">(13)</span>
+			
+									</a>
+								</li>
+								</ul>
+			
+							</li>
+							</ul>
+						</li>
+						</ul>
+					</div>
+			
+					<div class="main">
+						<div class="hgroup">
+						<div class="category">category</div>
+						<h1>제목</h1>
+						<div class="post-meta">
+							<span class="author">@webs</span>
+							<span class="date">2019. 4. 12. 21:03</span>
+						</div>
+						<div class="content">
+					<table class="list">
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>Depth 1</th>
+								<th>Depth 2</th>
+								<th>Depth 3</th>
+								<th>Depth 4</th>
+								<th>Depth 5</th>
+								<th>File Name</th>
+								<th>종료일</th>
+								<th>상태</th>
+								<th>수정내역</th>
+								<th>비고</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td><!-- No. -->
+								<td>레이아웃</td><!-- Depth 1 -->
+								<td></td><!-- Depth 2 -->
+								<td></td><!-- Depth 3 -->
+								<td></td><!-- Depth 4 -->
+								<td></td><!-- Depth 5 -->
+								<td><a target="_blank" href="html/layout.html">layout.html</a></td><!-- File Name -->
+								<td class="date"></td><!-- 종료일 -->
+								<td></td><!-- 상태 -->
+								<td></td><!-- 수정내역 -->
+								<td></td><!-- 비고 -->
+							</tr>
+							<tr>
+								<td></td><!-- No. -->
+								<td>메인</td><!-- Depth 1 -->
+								<td></td><!-- Depth 2 -->
+								<td></td><!-- Depth 3 -->
+								<td></td><!-- Depth 4 -->
+								<td></td><!-- Depth 5 -->
+								<td><a target="_blank" href="html/main.html">main.html</a></td><!-- File Name -->
+								<td class="date"></td><!-- 종료일 -->
+								<td></td><!-- 상태 -->
+								<td></td><!-- 수정내역 -->
+								<td></td><!-- 비고 -->
+							</tr>
+							<tr>
+								<td></td><!-- No. -->
+								<td>요약기록</td><!-- Depth 1 -->
+								<td></td><!-- Depth 2 -->
+								<td></td><!-- Depth 3 -->
+								<td></td><!-- Depth 4 -->
+								<td></td><!-- Depth 5 -->
+								<td><a target="_blank" href="html/summary.html">summary.html</a></td><!-- File Name -->
+								<td class="date"></td><!-- 종료일 -->
+								<td></td><!-- 상태 -->
+								<td></td><!-- 수정내역 -->
+								<td></td><!-- 비고 -->
+							</tr>
+						</tbody>
+					</table>                
+						</div>
+						</div>
+			
+			
+						<div class="tags">
+						<h2>updated event</h2>
+						<div class="items">
+							<a href="/tag/%EC%84%B8%EB%A1%9C%20%EB%A9%94%EB%89%B4" rel="tag">20201013</a>,
+							<a href="/tag/%EC%95%84%EC%BD%94%EB%94%94%EC%96%B8" rel="tag">20201009</a>
+						</div>
+						</div>
+			
+						<div class="related-articles">
+						<h2>UP NEXT : Menu/Accordian Menu</h2>
+						<ul>
+			
+							<li>
+							<a href="/1232?category=776706">
+								<span class="title">접기 펼치기 아코디언 메뉴(전체접기)</span>
+							</a>
+							</li>
+			
+							<li>
+							<a href="/1203?category=776706">
+								<span class="title">아코디언 스타일 탭메뉴 애니메이션</span>
+							</a>
+							</li>
+			
+							<li>
+							<a href="/751?category=776706">
+								<span class="title">가장 기본적인 아코디언 메뉴 애니메이션</span>
+							</a>
+							</li>
+			
+							<li>
+							<a href="/725?category=776706">
+								<span class="title">심플한 아코디언 메뉴 애니메이션</span>
+							</a>
+							</li>
+			
+						</ul>
+						</div>
+						<div id="entry830Comment">
+						<div class="comments">
+							<form method="post" action="/comment/add/830" onsubmit="return false" style="margin: 0">
+							<div class="comment-form">
+			
+								<div class="field">
+			
+								<input type="text" name="name" value="" placeholder="user ID">
+								<input type="password" name="password" value="" placeholder="비밀번호">
+			
+								<div class="secret">
+									<input type="checkbox" name="secret" id="secret">
+									<label for="secret" tabindex="0">Secret</label>
+								</div>
+								</div>
+			
+								<textarea name="comment" cols="" rows="4" placeholder="기록할 내용을 적어주세요."></textarea>
+								<div class="submit">
+								<button type="submit" class="btn" onclick="addComment(this, 830); return false;">기록하기</button>
+								</div>
+							</div>
+							</form>
+						</div>
+						</div>
+			
+					</div>
+			
+			
+					</div>
+			
+					<div class="pagination">
+					<a href='#' class="prev ">이전</a>
+					<a href='#'><span>1</span></a>
+					<a><span>&middot;&middot;&middot;</span></a>
+					<a href='#'><span>2</span></a>
+					<a href='#'><span>3</span></a>
+					<a href='#'><span>4</span></a>
+					<a href='#'><span>5</span></a>
+					<a href='#'><span>6</span></a>
+					<a><span>&middot;&middot;&middot;</span></a>
+					<a href='#'><span>8</span></a>
+					<a href='#' class="next ">다음</a>
+					</div>
+				</article>
+			</section>
+		
+			<footer id="footer">
+				<p class="copyright">Sooo</p>
+			</footer>
+		</div>
+		
+	</body>
 
 </html>
