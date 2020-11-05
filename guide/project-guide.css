@@ -1,0 +1,82 @@
+html,body,p,h1,h2,h3,h4,h5,h6,menu,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,hr,section,nav,article,footer,address,aside,figcaption,figure,header { margin:0;padding:0; }
+body { background-color:#fff; font-size:0.75em; font-family:'맑은 고딕','돋움',Dotum,AppleGothic,Roboto,'Droid Sans',AppleSDGothicNeo,Helvetica,sans-serif; }
+body *  { line-height:1.4em; }
+input,textarea,select,button,table { font-size:1em; }
+fieldset,button { border:0; }
+input, select { vertical-align:middle; }
+img { border:0; vertical-align:top; }
+ul,ol { list-style:none; display:inline-block; vertical-align:top; }
+em,address,i { font-style:normal; }
+a { text-decoration:none; vertical-align:middle; }
+a:hover,a:active,a:focus { text-decoration:underline; }
+button { display:inline-block;overflow:hidden;border:0;background:none;cursor:pointer; }
+table { border-collapse:collapse;border-spacing:0; width:100%; }
+.hide { position:absolute; overflow:hidden; top:0; left:0; width:100%; height:1px; text-indent:-10000px; }
+caption { height: 1px; overflow: hidden; line-height: 0; margin-top: -1px; color: transparent; }
+textarea { resize:none; vertical-align:middle; }
+
+html, body { width:100%; height:100%; }
+
+/* color
+ blue : #15a0d1
+ green : #619857
+*/
+
+#port-list { position:relative; width:100%; min-width:800px; }
+#port-list .tl { text-align:left !important; }
+#port-list td.tl { padding-left:10px !important; }
+
+#port-list .title { width:100%; max-width:1200px; margin:0 auto; padding:20px 10px 5px; box-sizing:border-box; }
+#port-list .project-title { margin-bottom:8px; font-size:20px; font-weight:bold; color:#000; }
+#port-list .project-info { line-height:14px; color:#333; }
+#port-list .project-info > span { display:inline-block; margin-right:2px; padding:3px 8px; background:#eee; border:1px solid #aaa; border-radius:3px; }
+
+#port-list .menu { width:100%; padding:5px 0; background:#333; box-sizing:border-box; text-align:center; }
+#port-list .menu ul { display:inline-block; width:100%; max-width:1200px;  }
+#port-list .menu li { float:left; margin-right:2px; }
+#port-list .menu li:first-child { margin-left:10px; }
+#port-list .menu li a { display:block; padding:5px 25px; background:rgba(0,0,0,.5); border-radius:1px; color:#fff; font-weight:bold; font-size:14px; border-bottom:2px solid #036ab3; border-radius:2px;}
+#port-list .menu li a.view { background:#fff; color:#333; box-shadow:0 0 10px rgba(0,0,0,.9); }
+
+#port-list .list { width:100%; max-width:1200px; margin:5px auto 0; padding:0 10px 20px; box-sizing:border-box; }
+#port-list .list + .list { border-top:1px solid #eee; }
+#port-list .list-title { margin:20px 0 10px; font-size:18px; line-height:22px; }
+#port-list .sorting { margin:-30px 0 10px; text-align:right; }
+#port-list .sorting .tit { display:inline-block; font-size:12px; line-height:22px; vertical-align:top; }
+#port-list .sorting select { height:22px; }
+#port-list .list .tbl-wrap { border-bottom:1px solid #ddd; }
+#port-list .list table { width:100%; }
+#port-list .list th { padding:8px 5px; color:#666; border:1px solid #aaa; background:#eee; }
+#port-list .list td { padding:5px; border:1px solid #ddd; border-bottom:none; color:#666; text-align:center; }
+#port-list .list td a { display:block; padding:1px 0; font-size:13px; font-weight:bold; color:#666; }
+#port-list .list td button { padding:1px 10px; border:1px solid #bbb; color:#999; border-radius:2px;}
+#port-list .list td button:hover { color:#fff; background:#999; }
+#port-list .list tr.div td { border-top:1px solid #666; }
+#port-list .list tr:hover th, #port-list .list tr:hover td { background:#efefef; }
+
+/* 가이드페이지 */
+#port-list .guide-wrap { max-width:1200px; margin:20px auto 0; padding-bottom:20px; font-size:13px; line-height:19px; letter-spacing:-0.03em;}
+#port-list .guide-wrap .tit-page { padding:30px 0 15px; font-size:30px; line-height:32px; letter-spacing:-0.1em; border-bottom:1px solid rgba(0,0,0,.1);}
+#port-list .guide-wrap .tit-cnt { padding:0 0 5px; font-size:20px; line-height:24px; }
+#port-list .guide-wrap .tit-section { margin-top:10px; padding:5px 0; font-size:16px; line-height:18px; }
+#port-list .guide-wrap .cnt-box { padding:15px 0; }
+#port-list .guide-wrap .cnt-box * + p, #port-list .guide-wrap .cnt-box * + ul, #port-list .guide-wrap .cnt-box * + ol { margin-top:5px; }
+#port-list .guide-wrap .btn-tx { border-bottom:1px solid #666; }
+#port-list .guide-wrap a { display:inline-block; padding:3px 10px; border:1px solid #666; text-indent:0;}
+#port-list .guide-wrap .tx-gray { color:#888; }
+
+#port-list .guide-wrap .tbl-wrap { margin:10px 0; }
+#port-list .guide-wrap .tbl-wrap th, #port-list .guide-wrap .tbl-wrap td { padding:5px 10px; border:1px solid #ccc; }
+#port-list .guide-wrap .tbl-wrap th { padding:10px; background:#eee; }
+#port-list .guide-wrap .tbl-wrap td { vertical-align:top; color:#555; font-size:13px; line-height:17px;}
+#port-list .guide-wrap li { position:relative; padding-left:15px; }
+#port-list .guide-wrap li:before { content:'-'; position:absolute; top:0; left:0; }
+#port-list .guide-wrap li + li { margin-top:3px; }
+#port-list .guide-wrap ol > li { padding-left:1em; text-indent:-1em; }
+#port-list .guide-wrap ol > li:before { display:none; }
+#port-list .guide-wrap .tbl-wrap li { padding-left:10px; }
+#port-list .guide-wrap .tbl-wrap li:before { content:''; position:absolute; width:3px; height:3px; top:8px; left:0; background:#666; border-radius:4px; }
+#port-list .guide-wrap .tbl-wrap a { display:inline-block; margin:2px 0; padding:3px 5px; background:#666; color:#fff; border-radius:2px; transition:.2s ease-in-out;}
+#port-list .guide-wrap .tbl-wrap a:hover { background:#222; }
+#port-list .guide-wrap .img { display:inline-block; margin:10px 0; border:1px solid #ccc; }
+#port-list .guide-wrap p + pre, #port-list .guide-wrap ul + pre, #port-list .guide-wrap ol + pre { margin-top:10px; }
