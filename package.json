@@ -4,7 +4,8 @@
   "description": "개인포트폴리오정리",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,6 @@
   "homepage": "https://github.com/Jeonsooyoung/soootpolio#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }
